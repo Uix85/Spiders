@@ -1,0 +1,25 @@
+[project]
+name = "bili-spider"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    # bilibili-api（tag_keywords/bilibili-api 本地目录）运行依赖：搜索层用它解决 v_voucher 软风控
+    "beautifulsoup4",
+    "colorama",
+    "lxml",
+    "pyyaml",
+    "brotli",
+    "qrcode",
+    "APScheduler",
+    "pillow",
+    "yarl",
+    "pycryptodomex",
+    "qrcode_terminal",
+    "PyJWT",
+    # 会话中补充的实际依赖（2026-09-02 审计补全，迁移电脑保证 uv sync 完整）
+    "tqdm",          # tag_keywords 进度条
+    "numpy",         # tag 共现/聚类分析
+    "curl_cffi",     # bilibili-api 的 TLS 指纹伪装客户端
+    "playwright",    # CDP 通道（channel=chrome 复用系统 Chrome）
+]

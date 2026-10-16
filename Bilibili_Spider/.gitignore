@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local credentials and pseudonymization salt
+.env
+.anon_salt
+
+# Generated data and caches
+data/
+api_cache.jsonl
